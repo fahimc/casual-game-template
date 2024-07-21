@@ -1,29 +1,3 @@
-:root {
-  --pink: #fe77ba;
-  --blue: #76bbff;
-  --blue-light: #87c0f8;
-  --purple: #af63fb;
-  ---green: #acfc5b;
-  --beige: #f9df88;
-  --white: #fff;
-  --starburst-dark: var(--blue);
-  --starburst-light: var(--blue-light);
-}
-@font-face {
-  font-family: "CuteDino";
-  src: url(./../public/fonts/Cute\ Dino.ttf);
-}
-#root {
-  height: 100%;
-  width: 100%;
-}
-body {
-  font-family: "CuteDino", sans-serif;
-  color: var(--white);
-  background-color: var(--blue);
-  width: 100vw;
-  height: 100vh;
-}
 .app {
   display: flex;
   justify-content: center;
