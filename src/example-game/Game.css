@@ -1,0 +1,41 @@
+.game-container {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: flex-start;
+  width: 100vw;
+  flex-wrap: wrap;
+  column-gap: 10px;
+  margin-left: 10px;
+  margin-right: 10px;
+  row-gap: 10px;
+  margin-top: 120px;
+}
+
+.bottle-container {
+  border: 2px solid white;
+  width: 50px;
+  height: 150px;
+  border-bottom-left-radius: 20px;
+  border-bottom-right-radius: 20px;
+  display: flex;
+  justify-content: flex-end;
+  align-items: flex-end;
+  overflow: hidden;
+}
+.bottle-fill {
+  width: 50px;
+  height: 100%;
+  border-bottom-left-radius: 20px;
+  border-bottom-right-radius: 20px;
+  display: flex;
+  justify-content: flex-end;
+  align-items: flex-end;
+  overflow: hidden;
+  flex-direction: column;
+}
+.fill-part {
+  background-color: var(--blue);
+  width: 50px;
+  height: 40px;
+  transition: height 0.5s;
+}

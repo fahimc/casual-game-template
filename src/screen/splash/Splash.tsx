@@ -9,7 +9,7 @@ const Splash: React.FC = () => {
   const [progress, setProgress] = React.useState(0);
   const onComplete = () => {
     clearInterval(timerRef.current);
-    navigate("/app");
+    navigate("/main-menu");
   };
 
   useEffect(() => {

@@ -5,6 +5,7 @@ import "./index.css";
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
 import Splash from "./screen/splash/Splash";
 import App from "./App";
+import MainMenu from "./screen/main-menu/MainMenu";
 const router = createBrowserRouter([
   {
     path: "/",
@@ -13,6 +14,10 @@ const router = createBrowserRouter([
   {
     path: "/splash",
     element: <Splash />,
+  },
+  {
+    path: "/main-menu",
+    element: <MainMenu />,
   },
   {
     path: "/app",

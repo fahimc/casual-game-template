@@ -1,7 +1,10 @@
 :root {
   --pink: #fe77ba;
+  --red: #fd1b1b;
+  --red-light: #fe7777;
   --blue: #76bbff;
   --orange: #efbe37;
+  --orange-light: #f6d989;
   --yellow: #fff176;
   --blue-light: #87c0f8;
   --blue-dark: #004080;
@@ -10,8 +13,12 @@
   --beige: #f9df88;
   --white: #fff;
   --black: #000;
-  --starburst-dark: var(--blue);
-  --starburst-light: var(--blue-light);
+  --sunburst-light-orange: var(--orange-light);
+  --sunburst-dark-orange: var(--orange);
+  --sunburst-dark-blue: var(--blue);
+  --sunburst-light-blue: var(--blue-light);
+  --border-radius: 20px;
+  --border-size: 3px;
 }
 @font-face {
   font-family: "CuteDino";
@@ -29,4 +36,7 @@ body {
   height: 100vh;
   margin: 0;
   padding: 0;
+}
+.layer {
+  position: absolute;
 }
