@@ -13,24 +13,46 @@ const generateInitialBottles = (
 ) => {
   const bottles = [];
   for (let i = 0; i < numberOfBottles; i++) {
-    let bottle = [];
+    let bottleColors = [];
     for (let j = 0; j < numberOfColours; j++) {
-      bottle.push({
-        color: colors[j],
-        height: 25,
+      bottleColors.push({
+        color: colors[i],
+        height: 100 / numberOfColours,
       });
-      bottles.push(bottle);
     }
+    bottles.push(bottleColors);
   }
+  bottles.push([]);
   return bottles;
 };
 
-const Game: React.FC<Props> = () => {
-  const [bottleItems, setBottleItems] = useState(() =>
-    generateInitialBottles(6, 6)
-  );
+function moveColorToBottle(
+  bottleItems: BottleItem[][],
+  moveBottleIndex: number,
+  moveToBottleIndex: number
+) {
+  const moveColor = bottleItems[moveBottleIndex].pop();
+  if (moveColor) {
+    bottleItems[moveToBottleIndex].push(moveColor);
+  }
+  return bottleItems;
+}
 
-  const bottles = bottleItems.map((bottle, index) => (
+function shuffle(bottleItems: BottleItem[][]) {
+  const numberOfColors = bottleItems[0].length;
+  console.log(numberOfColors);
+  //fill the empty bottle with all the other bottles
+  for (let i = 0; i < bottleItems.length - 1; i++) {
+    bottleItems = moveColorToBottle(bottleItems, i, bottleItems.length - 1);
+  }
+  return bottleItems;
+}
+
+const Game: React.FC<Props> = () => {
+  const [bottleItems, setBottleItems] = useState(generateInitialBottles(6, 6));
+
+  const newBottleItems = shuffle(bottleItems);
+  const bottles = newBottleItems.map((bottle, index) => (
     <Bottle key={index} fillItems={bottle} />
   ));
 
