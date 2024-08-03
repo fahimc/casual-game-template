@@ -6,3 +6,6 @@
   display: flex;
   overflow: hidden;
 }
+.disabled-events {
+  pointer-events: none;
+}

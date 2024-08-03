@@ -3,7 +3,7 @@ import Hud from "./components/hud/Hud";
 import Layer from "./components/layer/Layer";
 import Modal from "./components/modal/Modal";
 import Sunburst from "./components/sunburst/Sunburst";
-import Game from "./example-game/Game";
+import Game from "./example-game/BottleGame";
 function App() {
   return (
     <>
@@ -13,10 +13,10 @@ function App() {
       <Layer>
         <Game />
       </Layer>
-      <Layer>
+      <Layer disableEvents={true}>
         <Hud />
       </Layer>
-      <Layer>{/* <Modal /> */}</Layer>
+      <Layer disableEvents={true}>{/* <Modal /> */}</Layer>
     </>
   );
 }

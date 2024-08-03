@@ -6,6 +6,7 @@ export interface BottleItem {
 }
 interface BottleProps {
   fillItems: BottleItem[];
+  onClick?: () => void;
 }
 
 const Bottle: React.FC<BottleProps> = (props) => {
@@ -14,7 +15,7 @@ const Bottle: React.FC<BottleProps> = (props) => {
   return (
     // JSX code for your component's UI goes here
     <div>
-      <div className="bottle-container">
+      <div className="bottle-container" onClick={props.onClick}>
         <div className="bottle-fill">
           {props.fillItems?.map((item, index) => {
             return (
